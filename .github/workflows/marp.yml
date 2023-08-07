@@ -1,0 +1,18 @@
+name: CI
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: |
+          npx -y @marp-team/marp-cli README.md -o index.htm
+          git pull
+          git config --global user.email "kazuhitoyokoi@nodered.jp"
+          git config --global user.name "Kazuhito Yokoi"
+          git add index.htm
+          git commit -m "Update generated HTML file"
+          git push
