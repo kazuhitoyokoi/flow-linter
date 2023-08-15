@@ -16,6 +16,9 @@ https://kazuhitoyokoi.github.io/flow-linter/
 - Open Source Summit China
 
 ---
+# Flow linterの紹介
+
+---
 # フロー開発でよくある問題
 個人開発での😱から、大規模開発での🔥まで色々
 - http-in、http responseがペアになっていない
@@ -55,12 +58,39 @@ https://www.infoq.com/jp/news/2021/08/node-red-2-0-improvements/
 # ユーザ設定の画面
 - ルールの無効/有効は、ユーザ設定から設定可能
 - 各ルールの詳細設定も可能
+- カスタムプラグインの場合、本UIに表示も可能
 ![bg right w:550](config.png)
 
 ---
 # カスタムルール
-- カスタムプラグインの場合、本UIに表示も可能
 
+---
+# カスタムルールのコード
+```
+module.exports = {
+    "english-node-name": {
+        meta: {
+            type: "suggestion",
+            severity: "warn",
+            docs: {
+                description: "全てのノードの名前を英語のみにする"
+            }
+        },
+        create: function (context, ruleConfig) {
+            return {
+                "node": function (node) {
+                    if (!node.config.name.match(/^[ -~]*$/)) {
+                        context.report({
+                            location: [node.id],
+                            message: "ノード名は英数字、または記号である必要があります"
+                        })
+                    }
+                }
+            }
+        }
+    }
+};
+```
 ---
 ##### functionノード向けルール
 | # | ルール                     | 説明 |
@@ -85,7 +115,6 @@ $ nrlint ~/.node-red/flows.json
 
 ---
 # カスタムルールも動作
-
 ```JavaScript
 module.exports = {
     "plugins": [
