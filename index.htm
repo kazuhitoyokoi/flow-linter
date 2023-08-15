@@ -122,22 +122,22 @@ $ npm install nrlint
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-marpit-pagination="10" data-marpit-pagination-total="15" style="--paginate:true;">
 <h1 id="%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%83%AB%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%B3%E3%83%BC%E3%83%89">カスタムルールのコード</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>module.exports = {
-    &quot;english-node-name&quot;: {
-        meta: {
-            type: &quot;suggestion&quot;,
-            severity: &quot;warn&quot;,
-            docs: {
-                description: &quot;全てのノードの名前を英語のみにする&quot;
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-JavaScript"><span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = {
+    <span class="hljs-string">&quot;english-node-name&quot;</span>: {
+        <span class="hljs-attr">meta</span>: {
+            <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;suggestion&quot;</span>,
+            <span class="hljs-attr">severity</span>: <span class="hljs-string">&quot;warn&quot;</span>,
+            <span class="hljs-attr">docs</span>: {
+                <span class="hljs-attr">description</span>: <span class="hljs-string">&quot;全てのノードの名前を英語のみにする&quot;</span>
             }
         },
-        create: function (context, ruleConfig) {
-            return {
-                &quot;node&quot;: function (node) {
-                    if (!node.config.name.match(/^[ -~]*$/)) {
-                        context.report({
-                            location: [node.id],
-                            message: &quot;ノード名は英数字、または記号である必要があります&quot;
+        <span class="hljs-attr">create</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">context, ruleConfig</span>) {
+            <span class="hljs-keyword">return</span> {
+                <span class="hljs-string">&quot;node&quot;</span>: <span class="hljs-keyword">function</span> (<span class="hljs-params">node</span>) {
+                    <span class="hljs-keyword">if</span> (!node.<span class="hljs-property">config</span>.<span class="hljs-property">name</span>.<span class="hljs-title function_">match</span>(<span class="hljs-regexp">/^[ -~]*$/</span>)) {
+                        context.<span class="hljs-title function_">report</span>({
+                            <span class="hljs-attr">location</span>: [node.<span class="hljs-property">id</span>],
+                            <span class="hljs-attr">message</span>: <span class="hljs-string">&quot;ノード名は英数字、または記号である必要があります&quot;</span>
                         })
                     }
                 }
