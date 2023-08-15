@@ -14,6 +14,7 @@ https://kazuhitoyokoi.github.io/flow-linter/
 - GAIA-X
 - NECさん
 - Open Source Summit China
+![](https://pbs.twimg.com/media/F2DN0TbacAAwnk-?format=jpg&name=4096x4096)
 
 ---
 # Flow linterの紹介
