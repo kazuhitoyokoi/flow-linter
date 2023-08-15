@@ -68,7 +68,7 @@ https://www.infoq.com/jp/news/2021/08/node-red-2-0-improvements/
 
 ---
 # カスタムルールのコード
-```
+```JavaScript
 module.exports = {
     "english-node-name": {
         meta: {
