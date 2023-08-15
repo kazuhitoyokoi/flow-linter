@@ -13,6 +13,7 @@ https://kazuhitoyokoi.github.io/flow-linter/
 # 最近のNode-RED関連のニュース
 - GAIA-X
 - NECさん
+- Node-RED Con@NTT Com
 - Open Source Summit China
 ![](https://pbs.twimg.com/media/F2DN0TbacAAwnk-?format=jpg&name=4096x4096)
 ![](https://pbs.twimg.com/media/FyBevP2XwAIt5B1?format=jpg&name=4096x4096)
