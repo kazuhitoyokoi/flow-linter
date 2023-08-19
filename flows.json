@@ -1,0 +1,297 @@
+[
+    {
+        "id": "bb00a97575243988",
+        "type": "tab",
+        "label": "フロー 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "af3b9b5fb8c8a364",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "mysql",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "80ec9fcccf56b6fe",
+        "type": "http in",
+        "z": "bb00a97575243988",
+        "name": "",
+        "url": "/api",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 500,
+        "y": 60,
+        "wires": [
+            [
+                "cfbf8955e50197af"
+            ]
+        ]
+    },
+    {
+        "id": "b0c29aa4622ad17f",
+        "type": "debug",
+        "z": "bb00a97575243988",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "26dce6baee9757a8",
+        "type": "inject",
+        "z": "bb00a97575243988",
+        "name": "start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 510,
+        "y": 200,
+        "wires": [
+            [
+                "32234930fa5d98df"
+            ]
+        ]
+    },
+    {
+        "id": "d27b97a817dfd51c",
+        "type": "debug",
+        "z": "bb00a97575243988",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "32234930fa5d98df",
+        "type": "switch",
+        "z": "bb00a97575243988",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 610,
+        "y": 260,
+        "wires": [
+            [
+                "d27b97a817dfd51c"
+            ],
+            [
+                "73175e2943d4c581"
+            ]
+        ]
+    },
+    {
+        "id": "73175e2943d4c581",
+        "type": "change",
+        "z": "bb00a97575243988",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 340,
+        "wires": [
+            [
+                "32234930fa5d98df"
+            ]
+        ]
+    },
+    {
+        "id": "cfbf8955e50197af",
+        "type": "template",
+        "z": "bb00a97575243988",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 660,
+        "y": 60,
+        "wires": [
+            [
+                "106fa934a35e0372"
+            ]
+        ]
+    },
+    {
+        "id": "df9ef64a49bac881",
+        "type": "function",
+        "z": "bb00a97575243988",
+        "name": "日本語",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e11adade70936042",
+        "type": "function",
+        "z": "bb00a97575243988",
+        "name": "Русский",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "484baeccc6ad7789",
+        "type": "function",
+        "z": "bb00a97575243988",
+        "name": "Français",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f5c129e7dd6b303f",
+        "type": "function",
+        "z": "bb00a97575243988",
+        "name": "Deutsch",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "34a712d4e1837143",
+        "type": "function",
+        "z": "bb00a97575243988",
+        "name": "한국어",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cb6e1553f8c86fe3",
+        "type": "function",
+        "z": "bb00a97575243988",
+        "name": "Português",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "106fa934a35e0372",
+        "type": "mysql",
+        "z": "bb00a97575243988",
+        "mydb": "af3b9b5fb8c8a364",
+        "name": "",
+        "x": 530,
+        "y": 120,
+        "wires": [
+            [
+                "b0c29aa4622ad17f"
+            ]
+        ]
+    }
+]
