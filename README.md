@@ -14,30 +14,30 @@ https://kazuhitoyokoi.github.io/flow-linter/
 - 日立製作所
   - ソリューションアーキテクト
   - DX、Industry 4.0研修講師
-![bg right vertical w:500](https://nodered.jp/image/yokoi.jpg)
+![bg right vertical w:500](https://nodered.jp/images/yokoi.jpg)
 
 ---
 # 最近のNode-RED関連のニュース (1/2)
 - GAIA-X
-  - 欧州の製造業のサプライチェーンをつなぐGAIA-XがNode-REDを採用
-  - 2023年7月からEclipse Foundationの管理下でOSS開発を推進
+  - 製造業サプライチェーンをつなぐGAIA-XがNode-RED採用
+  - Eclipse Foundationの管理下でOSS開発を推進
 - NECさん
   会社ブログでNode-RED v3.1への貢献、イベント登壇について紹介
-![bg right vertical w:500](https://pbs.twimg.com/media/F2DN0TbacAAwnk-?format=jpg&name=4096x4096)
-![bg right vertical w:500](https://pbs.twimg.com/media/FyBevP2XwAIt5B1?format=jpg&name=4096x4096)
+  https://jpn.nec.com/oss/community/blog/node-red_v3.1.html
+![bg right vertical w:600](gaiax.jpeg)
+![bg right vertical w:600](https://pbs.twimg.com/media/FyBevP2XwAIt5B1?format=jpg&name=4096x4096)
 
-https://jpn.nec.com/oss/community/blog/node-red_v3.1.html
 
 ---
 # 最近のNode-RED関連のニュース (2/2)
 - Node-RED Con 2023
-  11月10日に、NTTコミュニーケーションズ本社ビルで年次カンファレンスを開催
+  11月にNTTコミュニーケーションズでカンファレンスを開催
 - OpenJS World China 2023
-  - 9月26日に上海でOpenJS Foundation主催のイベントを開催
-  - Node-REDプロジェクトも登壇
+  - 9月に上海でOpenJS Foundationのイベントを開催
+  - Node-REDもセッション有
 
-![bg right vertical w:500](https://raw.githubusercontent.com/node-red/nrcon/main/images/nrcon.png)
-![bg right vertical w:500](https://pbs.twimg.com/media/FyBevP2XwAIt5B1?format=jpg&name=4096x4096)
+![bg right vertical w:600](https://raw.githubusercontent.com/node-red/nrcon/main/images/nrcon.png)
+![bg right vertical w:600](https://pbs.twimg.com/media/F4FTKTlXkAAsqe8?format=webp&name=medium)
 
 ---
 # Flow Linterの紹介
