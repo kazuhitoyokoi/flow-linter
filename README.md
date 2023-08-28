@@ -76,8 +76,8 @@ $ npm install nrlint
 ##### 標準で用意されているルール
 | # | ルール                     | 説明 |
 | - | ------------------------- | ---- |
-| 1 | align-to-grid             | ノードの配置をグリッドに合わせる |
-| 2 | max-flow-size             | ノードの上限数 |
+| 1 | align-to-grid             | ノードの配置をワークスペースの格子に合わせる |
+| 2 | max-flow-size             | フロー内のノードの上限数(デフォルト: 100個) |
 | 3 | no-duplicate-http-in-urls | http-inに設定したURLの重複を警告 |
 | 4 | no-loops                  | フローのループを検出 |
 | 5 | no-overlapping-nodes      | ノードが重なりを検出 |
