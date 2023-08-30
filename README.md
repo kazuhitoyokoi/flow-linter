@@ -51,6 +51,7 @@ https://kazuhitoyokoi.github.io/flow-linter/
 - functionノードのJavaScriptコードの記述が自由
 
 -> これらの問題を避けて、フローをサクサク開発したい
+![bg right h200](issue.png)
 
 ---
 # Flow Linterとは
