@@ -44,14 +44,14 @@ https://kazuhitoyokoi.github.io/flow-linter/
 
 ---
 # フロー開発で生じる問題
-個人開発での😱から、大規模開発での🔥まで色々
-- http-in、http responseがペアになっていない
+個人開発での😱から、<br>大規模開発での🔥まで色々
+- http-in、responseがペアでない
 - フローにループが存在
-- ノード名にローカル言語を使ってしまう
-- functionノードのJavaScriptコードの記述が自由
+- ノード名にローカル言語を使用
+- functionノードの<br>JavaScriptコードの記述が自由
 
--> これらの問題を避けて、フローをサクサク開発したい
-![bg right h200](issue.png)
+-> これらの問題を避けて、<br>　 フローをサクサク開発したい
+![bg right h:700](issue.png)
 
 ---
 # Flow Linterとは
@@ -59,8 +59,8 @@ https://kazuhitoyokoi.github.io/flow-linter/
 - フローエディタ上でリアルタイムに解析し、警告を表示
 - functionノードのJavaScriptコードの解析にはESLintを採用
 
-![h:300](infoq.png)
-https://www.infoq.com/jp/news/2021/08/node-red-2-0-improvements/
+![w:200](data:image/gif;base64,R0lGODlhAQABAGAAACH5BAEKAP8ALAAAAAABAAEAAAgEAP8FBAA7) ![h:300](infoq.png)
+![w:420 h:1](data:image/gif;base64,R0lGODlhAQABAGAAACH5BAEKAP8ALAAAAAABAAEAAAgEAP8FBAA7)[InfoQのニュース](https://www.infoq.com/jp/news/2021/08/node-red-2-0-improvements/)での紹介
 
 ---
 # インストール方法
@@ -68,10 +68,10 @@ https://www.infoq.com/jp/news/2021/08/node-red-2-0-improvements/
 $ cd ~/.node-red
 $ npm install nrlint
 ```
-
 - フローエディタを開くと、右側にリントタブが追加される
 - フローの静的解析も有効となり、
   警告時はノードの右上に「！」マークが表示される
+![bg right h:400](floweditor.png)
 
 ---
 ##### 標準で用意されているルール
@@ -97,16 +97,19 @@ $ npm install nrlint
 # 本格的な使い方
 
 ---
-##### functionノード向けルール
-- hoge
-- hoge
+# functionノード向けルール
+ESLintのルールを利用できる
+![](eslint.png)
+https://eslint.org/docs/latest/rules/
 
+---
 # カスタムルールを作成
-標準ルール以外のルールを用いたい場合のカスタムルールにも対応
+標準ルール以外を用いたい場合は、<br>カスタムルールも作成可能
 - プラグイン化してnpmに公開することも可能
-- CLI版Flow linterでも利用可能
+- CLI版Flow Linterでも利用可能
 
-URL
+https://github.com/kazuhitoyokoi/nrlint-plugin-rules-english-node-name.git
+![bg right w:600](editor.png)
 
 ---
 # カスタムルールのコード
@@ -148,8 +151,6 @@ $ nrlint --init > .nrlintrc.js
 $ nrlint ~/.node-red/flows.json
 ```
 
-実行結果の画像
-
 ---
 # 設定ファイル「.nrlintrc.js」の内容
 ルールを有効にしたい際は「true」、無効にしたい際は「"off"」を指定
@@ -173,7 +174,7 @@ module.exports = {
 ```JavaScript
 module.exports = {
     "plugins": [
-        "nrlint-plugin-rules-english-node-name" // hoge
+        "nrlint-plugin-rules-english-node-name" // 追加
     ],
     "rules": {
         "align-to-grid": true,
@@ -184,17 +185,20 @@ module.exports = {
         "no-unconnected-http-nodes": true,
         "no-unnamed-functions": true,
         "no-unnamed-links": true,
-        "english-node-name": true // hoge
+        "english-node-name": true // 追加
     }
 }
 ```
 
 ---
-# GitHub Actionsで自動テスト
+# GitHub Actionsで<br>自動テスト
 - GitHubにフローを置くタイミングで、自動的にFlow Linterを実行
 - 開発プロジェクトにて、フローの開発方法を事前定義
 
 ![bg right h:400](actions.png)
+
+---
+# 最後に
 
 ---
 # 日本語化のPull Requestを出してみました🇯🇵
@@ -203,4 +207,6 @@ https://github.com/node-red/nrlint/pull/40
 
 ---
 # 書籍紹介
-GitLab CIでの活用例を紹介予定
+秋に発売予定の書籍で、<br>GitLab CIでの活用例を紹介予定
+
+![bg right h:600](gitlabci.png)
